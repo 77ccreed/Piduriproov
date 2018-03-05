@@ -1,0 +1,45 @@
+* {
+  border: 2px solid rgb;
+  ;
+}
+
+body {
+  text-align: center;
+  font-size: 1.5em;
+  background: linear-gradient(to left, rgb(230, 231, 233), rgb(236, 254, 255) 50%, rgb(231, 251, 255) 75%, rgb(230, 233, 233));
+}
+
+h4 {
+  font-size: 2em;
+  margin-top: 30px;
+  background: linear-gradient(0.25turn, #3391b9, #4e637c, #065281);
+  color: #fff;
+  text-shadow: 4px 4px #16161650;
+  font-family: 'Lora',
+  serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-shadow: 4px 4px #16161650;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 30px;
+  background: linear-gradient(0.25turn, #3391b9, #4e637c, #065281);
+  color: rgb(236, 216, 179);
+  text-shadow: 4px 4px #16161650;
+  font-family: 'Lora', serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-shadow: 4px 4px #16161650;
+}
+
+h2:hover {
+  color: #fff;
+  text-shadow: 1px 1px #242323;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

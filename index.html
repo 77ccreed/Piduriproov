@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Piduriproovi kalkulaator</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="rgb(223, 235, 236)" />
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <header>
+        <div class="show-on-medium-and-up hide-on-small-only">
+          <h2 class=" z-depth-5 hoverable">Piduriproovi kalkulaator</h2>
+        </div>
+        <div class="show-on-small hide-on-med-and-up">
+          <h4 class=" z-depth-5 hoverable">Piduriproovi kalkulaator</h4>
+        </div>
+      </header>
+
+      <main>
+        <form name="proov" class="form data-success">
+          <div class="input-field col s12 m6">
+            <input name="tuhikaal" id="tuhi_kaal" type="number" min="0" max="8000" step="100">
+            <label for="tuhi_kaal" class="black-text">Tühjade vagunite kaal</label>
+          </div>
+
+          <div class="input-field col s12 m6">
+            <input name="tuhitelgi" id="tuhi_telgi" type="number" min="0" max="800" step="4">
+            <label for="tuhi_telgi" class="black-text">Tühjade vagunite telgede arv</label>
+          </div>
+
+          <div class="input-field col s12 m6">
+            <input name="laetudkaal" id="laetud_kaal" type="number" min="0" max="8000" step="100">
+            <label for="laetud_kaal" class="black-text">Laetud vagunite kaal</label>
+          </div>
+
+          <div class="input-field col s12 m6">
+            <input name="laetudtelgi" id="laetud_telgi" type="number" min="0" max="800" step="4">
+            <label for="laetud_telgi" class="black-text">Laetud vagunite telgede arv</label>
+          </div>
+        </form>
+
+
+
+        <div class="container">
+          <button class="btn btn-large cyan darken-3 z-depth-5 waves-effect waves-light teal-text text-lighten-5" type="button" name="Sisesta"
+            value="Sisesta" onclick="calc()">Arvuta</button>
+        </div>
+
+
+        <table id="table" class="striped centered bordered z-depth-3 ">
+          <tbody>
+            <tr>
+              <td>
+                <p>Nõutav pidurdusjõud kokku:
+                  <span id="kokku_noutav"></span>
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p> Tegelik pidurdusjõud kokku:
+                  <span id="kokku_tegelik"></span>
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p> Käsipidurite arv:
+                  <span id="kasipidureid"></span>
+                </p>
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p>Nõutav pidurdusjõud tühjadel vagunitel:
+                  <span id="tuhi_noutav"></span>
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p> Tegelik pidurdusjõud tühjadel vagunitel:
+                  <span id="tuhi_tegelik"></span>
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p>Nõutav pidurdusjõud laetud vagunitel:
+                  <span id="laetud_noutav"></span>
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p>Tegelik pidurdusjõud laetud vagunitel:
+                  <span id="laetud_tegelik">
+                  </span>
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p>Vagunite kaal kokku:
+                  <span id="kokku_kaal"></span>
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p> Telgede arv kokku:
+                  <span id="kokku_telgi"></span>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  </main>
+
+
+  <footer>
+    <div class="fixed-action-btn click-to-toggle">
+      <a class="btn-floating btn-large blue-grey darken-1">
+        <i class="large material-icons">
+          <i class="fas fa-info-circle"></i>
+        </i>
+      </a>
+      <ul>
+        <li>
+<a class="btn-floating btn green darken-1 tooltipped data-position="right"  data-delay="50 " data-tooltip="Info
+  "modal-trigger" href="#modal1">
+            <i class="material-icons">
+              <i class="fas fa-info-circle"></i>
+            </i>
+          </a>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
+
+        </li>
+        <li>
+<a href="https://www.w3schools.com/html/" target="_blank" class="btn-floating grey darken-3 tooltipped data-position= " right
+  "  data-delay="50 " data-tooltip="GitHub "">
+            <i class="material-icons">
+              <i class="fab fa-github">
+              </i>
+          </a>
+        </li>
+        <li>
+
+
+      </ul>
+    </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+
+</html>
